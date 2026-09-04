@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-AU-compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>auto calculate price</title>
+</head>
+<body>
+    <h2> calculate in javascript</h2>
+    <form name="frm-pin" method="post" action-index.php">
+    <input type="hidden" name="mode" value="PinRequest"/>
+	
+    <label>number of quantity</label>
+    <select name="tot_pin_request" onchange=" calculateTotalcost(this.value)" id="">
+    <option value=""disable selected>choose your option </option>
+	
+    <option value="1"</option>
+    <option value="2"></option>
+    <option value="3"></option>
+    <option value="4"></option>
+    <option value="5"></option>
+    <option value="6"></option>
+    <option value="7"></option>
+    <option value="8"></option>
+    <option value="9"></option>
+    <option value="10"></option>
+</select>
+
+<label> <b> Total cost</b></label>
+<input class="w3-input w3-border" id="quantity_price" name="quntity_amount" type="text" readonly>
+
+
+<script>
+function calculateTotalcost(val){
+var price = 100 // price for 1 unity = 100
+var quantity_price = price * val;
+
+//display the result
+var divobj= document.getElementById('quantity_price');
+divobj.value= quantity_price;
+}
+</script>
+</form>
+</body>
+</html>
